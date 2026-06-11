@@ -1,0 +1,220 @@
+/* ========== General Body Styles ========== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdf6f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* ========== Header Styles ========== */
+header {
+    background-color: #0f51a7;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-family: cursive;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* ========== Pet List & Cards ========== */
+.pet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pet-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.pet-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pet-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.pet-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.pet-info h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.pet-info p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin: 4px 0;
+}
+
+.pet-info .btn {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.pet-info .btn:hover {
+    background-color: #2ecc71;
+}
+
+.pet-info .adopted-tag {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ========== Adoption Form Container ========== */
+.adopt-container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #270db8;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.adopt-container h1 {
+    text-align: center ;
+    color: #f11111;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* ========== Pet Detail Box ========== */
+.pet-details {
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* ========== Adoption Form ========== */
+.adopt-form {
+    background-color:hsl(312, 80%, 85%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pet-details img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.adopt-form h2 {
+
+    text-align: center;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.adopt-form label {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.adopt-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.adopt-form input {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #3df0e1;
+    border-radius: 8px;
+    font-size:medium;
+    margin-top: 5px;
+}
+
+/* Submit Button */
+.adopt-form button {
+    text-align: center;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #ffffff;
+    color: rgb(6, 0, 7);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.adopt-form button:hover {
+    background-color: #f18c07;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #020405;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ========== Sort Dropdown Section ========== */
+.sort-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sort-section select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #cbd44a;
+    border-radius: 5px;
+    background-color: #ad0876;
+    color: white;
+    cursor: pointer;
+}
+
+.sort-section select:focus {
+    outline: none;
+    border-color: #27ae60;
+}
+

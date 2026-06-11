@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Pets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Available Pets for Adoption</h1>
+    </header>
+
+    <!-- Sort Dropdown -->
+    <section class="sort-section">
+        <form method="get" action="{{ url_for('index') }}">
+            <label for="sort_by">Sort By:</label>
+            <select name="sort_by" id="sort_by" onchange="this.form.submit()">
+                <option value="name" {% if request.args.get('sort_by') == 'name' %}selected{% endif %}>Name</option>
+                <option value="age" {% if request.args.get('sort_by') == 'age' %}selected{% endif %}>Age</option>
+                <option value="breed" {% if request.args.get('sort_by') == 'breed' %}selected{% endif %}>Breed</option>
+                <option value="gender" {% if request.args.get('sort_by') == 'gender' %}selected{% endif %}>Gender</option>
+            </select>
+        </form>
+    </section>
+
+    <!-- Pet Cards -->
+    <section class="pet-list">
+        {% for pet in pets %}
+        <div class="pet-card">
+            <img src="{{ url_for('static', filename='images/' + pet[6]) }}" alt="{{ pet[1] }}">
+            <div class="pet-info">
+                <h2>{{ pet[1] }}</h2>
+                <p><strong>Breed:</strong> {{ pet[2] }}</p>
+                <p><strong>Age:</strong> {{ pet[3] }}</p>
+                <p><strong>Gender:</strong> {{ pet[4] }}</p>
+                {% if pet[5] == 'available' %}
+                    <a href="{{ url_for('adopt', pet_id=pet[0]) }}" class="btn">Adopt</a>
+                {% else %}
+                    <p class="adopted-tag">Already Adopted</p>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>
+

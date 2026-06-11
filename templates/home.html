@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Pet Adoption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="page-border">
+    <div class="home-container">
+        <h1>🐾Welcome to Pet Adoption Center 🐾</h1>
+        <p>Your perfect companion is waiting for you!</p>
+        <p>Browse our loving pets, ready to be adopted into caring homes.</p>
+        <p>Click the button below to start your adoption journey today!</p>
+        <a href="{{ url_for('index') }}" class="start-btn">Get Started</a>
+    </div>
+</div>
+</body>
+</html>

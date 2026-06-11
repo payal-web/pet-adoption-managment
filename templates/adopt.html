@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt {{ pet[1] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Adopt {{ pet[1] }}</h1>
+    </header>
+
+    <!-- Adoption Form Section -->
+    <section class="adopt-container">
+        <div class="pet-details">
+            <!-- Display the respective pet image -->
+            <img src="{{ url_for('static', filename='images/' + pet[6]) }}" alt="{{ pet[1] }}" class="pet-image">
+            <div class="pet-info">
+                <h2>{{ pet[1] }}</h2>
+                <p><strong>Breed:</strong> {{ pet[2] }}</p>
+                <p><strong>Age:</strong> {{ pet[3] }}</p>
+                <p><strong>Gender:</strong> {{ pet[4] }}</p>
+            </div>
+        </div>
+
+        <!-- Adoption Form -->
+        <form class="adopt-form" method="POST">
+            <h2>Adopt this Pet</h2>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Adopt Now</button>
+        </form>
+
+        <!-- Back to Home Link -->
+        <a href="{{ url_for('index') }}" class="back-link">Back to Available Pets</a>
+    </section>
+</body>
+</html>

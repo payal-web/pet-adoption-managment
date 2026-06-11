@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        .success-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="success-message">
+        <h1>🎉Adoption Successful!🎉</h1>
+        <p>Your pet adoption was successful. Thank you for choosing to adopt!</p>
+        <a href="{{ url_for('index') }}">Go Back to Available Pets</a>
+    </div>
+
+</body>
+</html>
+
+
